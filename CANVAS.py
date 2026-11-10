@@ -1,6 +1,6 @@
 
 # Copilot-Assisted Novelty Verifier via Alex Search
-# simply copied stReviewNoveltyCheckerAlex_2.py
+# simply copied stReviewNoveltyCheckerAlex_2.py and then changed header text to "CANVAS" , added icon and the brief workflow description
 
 
 import io
@@ -16,11 +16,26 @@ import streamlit as st
 # CONFIG
 # ============================================================
 
-st.set_page_config(
-    page_title="OpenAlex Review Novelty Check",
-    page_icon="🔎",
-    layout="wide",
+
+import streamlit as st
+
+st.set_page_config(page_title="CANVAS", page_icon="🎨", layout="wide")
+
+st.title("🎨 CANVAS")
+st.subheader("**C**opilot-**A**ssisted **N**ovelty **V**erifier via Open**A**lex **S**earch")
+st.markdown(
+    """
+    ---
+    ### 🔄 Workflow Pipeline
+    1. **Copilot Prep:** Upload your step 2 output (the one with generated OpenAlex queries).
+    2. **Novelty Check:** Press the Fetch button under the loaded dataset and CANVAS instantly performs all the OpenAlex queries and presents an enriched version of the input file. 
+    3. **IF YOU SEE ANY ERRORS, PLEASE ENTER YOUR OPENALEX API KEY** (optional) and re-run the queries.   
+    ---
+    """
 )
+
+
+
 
 OPENALEX_BASE = "https://api.openalex.org/works"
 
